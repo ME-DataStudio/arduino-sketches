@@ -13,9 +13,9 @@
 
 // Network and API Configuration
 const int MAX_NETWORKS = 1;
-const char* ssid[MAX_NETWORKS] = {"ORBI71"};
-const char* password[MAX_NETWORKS] = {"Cnstf@0305"};
-const char* apiKey = "087fb5007eb9ba4761dd0e9901c59249";
+const char* ssid[MAX_NETWORKS] = {"SSID"};
+const char* password[MAX_NETWORKS] = {"PASSWORD"};
+const char* apiKey = "API_KEY";
 const float latitude = 53.174145180943;  // for Ohrid
 const float longitude = 6.6305010088279; // for Ohrid
 
