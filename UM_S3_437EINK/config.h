@@ -1,10 +1,10 @@
 
 
 // Network and API Configuration
-const char* WIFI_SSID = "ORBI71";
-const char* WIFI_PASS = "Cnstf@0305";
-const char* HA_TOKEN = "087fb5007eb9ba4761dd0e9901c59249";
-const char* HA_URL = "http://192.168.1.242:8123";
+const char* WIFI_SSID = "SSID";
+const char* WIFI_PASS = "PASSWORD";
+const char* HA_TOKEN = "HASS_TOKEN";
+const char* HA_URL = "http://homeassitent.local";
 const float latitude = 53.174145180943;  // for Ohrid
 const float longitude = 6.6305010088279; // for Ohrid
 
