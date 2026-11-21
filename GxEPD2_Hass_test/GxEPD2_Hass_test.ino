@@ -29,7 +29,7 @@ void setup() {
   gfx.init(115200, true, 2, false);  
     
   // Connect to WiFi  
-  WiFi.begin("ORBI71", "Cnstf@0305");  
+  WiFi.begin("SSID", "PASSWORD");  
   while (WiFi.status() != WL_CONNECTED) {  
     delay(1000);  
   }  
@@ -42,9 +42,8 @@ String getHAData(String entity_id) {
   String url = "http://homeassistant.local:8123/api/states/" + entity_id;  
     
   http.begin(url);  
-  //http.addHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI1MmViMzlmNmQzYTY0OGU0OTRmYjYxZDhmNmRiNzUyNCIsImlhdCI6MTc3MDc1MTQ0MiwiZXhwIjoyMDg2MTExNDQyfQ.Git5jYG2KHkToHtPFZB1T7Rh_AF8n6Eqg0guzXoIv6I");  
   http.setAuthorizationType("Bearer");
-  http.setAuthorization("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiI1MmViMzlmNmQzYTY0OGU0OTRmYjYxZDhmNmRiNzUyNCIsImlhdCI6MTc3MDc1MTQ0MiwiZXhwIjoyMDg2MTExNDQyfQ.Git5jYG2KHkToHtPFZB1T7Rh_AF8n6Eqg0guzXoIv6I");
+  http.setAuthorization("hass_api_key");
   http.addHeader("Content-Type", "application/json");  
     
   int httpCode = http.GET();  
