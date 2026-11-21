@@ -16,11 +16,9 @@ UMSeriesD umseriesd;
 
 // Network and API Configuration
 const int MAX_NETWORKS = 1;
-const char* ssid[MAX_NETWORKS] = {"ORBI71"};
-const char* password[MAX_NETWORKS] = {"Cnstf@0305"};
-//const char* apiKey = "087fb5007eb9ba4761dd0e9901c59249";
-//const float latitude = 53.174145180943;  // for Ohrid
-//const float longitude = 6.6305010088279; // for Ohrid
+const char* ssid[MAX_NETWORKS] = {"ssid"};
+const char* password[MAX_NETWORKS] = {"password"};
+
 int currentDayIndex = 0;
 int lastUpdateHour = -1;
 
@@ -86,9 +84,9 @@ void fetchCurrentImage() {
   String url = "http://192.168.1.6:4567/api/display";
   
   http.begin(client, url);
-  http.addHeader("id", "10:CF:0F:BB:9C:89");
+  http.addHeader("id", "macaddress");
   http.addHeader("Content-Type","application/json");
-  http.addHeader("access-token","22gSZSgoQTwld14G9lsH");
+  http.addHeader("access-token","accesstoken_from_server");
   int httpCode = http.GET();
   Serial.println("getting image from TRMNL server.");
   Serial.println(httpCode);
