@@ -27,8 +27,8 @@ bool invertDisplay = false;  // Current display state
 GxEPD2_4C < GxEPD2_437c, GxEPD2_437c::HEIGHT / 2 > epd(GxEPD2_437c(/*CS=D8*/ CS, /*DC=D3*/ DC, /*RST=D4*/ RST, /*BUSY=D2*/ BUSY)); // Waveshare 4.37" 4-color
 
 // Network and API Configuration
-const char* ssid = "ORBI71";
-const char* password = "Cnstf@0305";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 // display
 const int screenW = 512, screenH = 368;
 
